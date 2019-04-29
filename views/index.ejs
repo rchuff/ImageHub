@@ -1,0 +1,38 @@
+<%- include("header"); %>
+<div id="pageHead">
+  <h1 class="title">ImageHub.</h1>
+  <h2 class="title">Your personal image storage.</h2>
+  <img src="/images/nature2.jpg" alt="nature2.jpg" class="title-image">
+
+  <form action="/login" method="post">
+    <div class="submit">
+      <input type="submit" name="submit" class="btn btn-dark" value="Login">
+    </div>
+
+    <div class="submit">
+      <input type="submit" name="submit" class="btn btn-light" value="Register">
+    </div>
+  </form>
+</div>
+
+<div id="siteDescription">
+  <div class="descripField">
+    <i class="fas fa-camera-retro pictureLeft"></i>
+    <p class="description left">ImageHub was invented as a means to store your personal photos and use some predefined filters.</p>
+  </div>
+
+  <div class="descripField">
+    <i class="fas fa-comment pictureRight"></i>
+    <p class="description right">Upload as many as you please and the photo will be tagged with a randomly selected cheesy caption to truly capture the moment.</p>
+  </div>
+
+  <div class="descripField">
+    <i class="fas fa-users pictureLeft"></i>
+    <p class="description left">Connect with friends and family to gather photos from all parts of your life!</p>
+  </div>
+
+</div>
+
+
+
+<%- include("footer"); %>

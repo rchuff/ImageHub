@@ -1,3 +1,109 @@
 body {
-  background-color: #a9eec2;
+  text-align: center;
+  background-color: #ffd98e;
+}
+
+form {
+  position: relative;
+}
+
+.login {
+  color: #616f39;
+}
+
+.passShift {
+  position: relative;
+  left: 2px;
+}
+
+.loginPage {
+  padding-top: 200px;
+}
+
+.form-control {
+  width: 25%;
+  display: inline;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.tree-left {
+  position: relative;
+  color: #616f39;
+  font-size: 6rem;
+  bottom: 170px;
+  right: 300px;
+}
+
+.tree-right {
+  position: relative;
+  color: #616f39;
+  font-size: 6rem;
+  bottom: 170px;
+  left: 300px;
+}
+
+
+.btn {
+  margin: 0 5px 15px 5px;
+}
+
+.submit{
+  display: inline;
+}
+
+.title {
+  font-family: 'Cormorant Unicase', serif;
+}
+
+.title-image {
+  border-radius: 25px;
+  margin: 1em;
+}
+
+.pictureLeft{
+  font-size: 3em;
+  float: left;
+  margin-right: 10px;
+}
+
+.pictureRight {
+  font-size: 3em;
+  float: right;
+  margin-left: 10px;
+}
+
+.description{
+  color: #616f39;
+  padding-top: 7px;
+}
+
+.descripField {
+  padding: 25px 0;
+}
+
+.left {
+  text-align: left;
+  width: 75%;
+}
+
+.right {
+  text-align: right;
+}
+
+.loginBackground {
+  background-color: #ffd98e;
+}
+
+
+#pageHead {
+  background-color: #616f39;
+}
+
+#pageHead .title {
+  color: #ffd98e;
+}
+
+#siteDescription {
+  background-color: #ffb677;
 }
