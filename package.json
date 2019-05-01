@@ -13,6 +13,11 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mongoose": "^5.5.2"
+    "gridfs-stream": "^1.1.1",
+    "m": "^1.5.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.2",
+    "multer": "^1.4.1",
+    "multer-gridfs-storage": "^3.2.3"
   }
 }

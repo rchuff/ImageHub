@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 
+
 const app = express();
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -17,6 +18,14 @@ app.use(bodyParser.urlencoded({
 mongoose.connect("mongodb://localhost:27017/userimageDB", {
   useNewUrlParser: true
 });
+
+const itemSchema = new mongoose.Schema({
+  img: {data: Buffer, contentType: String}
+});
+
+const Item = new mongoose.model("Clothes", itemSchema);
+
+
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -37,13 +46,6 @@ app.get("/register", function(req, res) {
   res.render("register");
 });
 
-app.get("/user", function(req, res) {
-  res.send("User page success");
-});
-
-app.get("/users/:userId", function(req, res) {
-  res.render("user");
-});
 
 app.post("/login", function(req, res) {
   const loginValue = req.body.submit;
@@ -54,11 +56,12 @@ app.post("/login", function(req, res) {
   } else {
     const username = req.body.username;
     const password = req.body.password;
-    User.find({username: username}, 'password', function(err, userFound) {
+    User.find({username: username}, function(err, userFound) {
       if (userFound) {
         const hash = userFound[0].password;
         if (bcrypt.compareSync(password, hash)) {
-          res.redirect("/users/" + userFound[0]._id);
+          console.log(userFound[0]);
+          res.render("user", {username: userFound[0].username});
         } else {
           res.redirect("/login");
         }
@@ -79,9 +82,14 @@ app.post("/register", function(req, res) {
     password: hash
   });
 
-  newUser.save();
-  res.redirect("user");
-
+  newUser.save(function(err, newUser){
+    if (err){
+      console.log(err);
+    } else {
+      res.render("users", {username: newUser.username});
+      console.log(newUser);
+    }
+  });
 });
 
 
