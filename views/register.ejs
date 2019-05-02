@@ -1,18 +1,36 @@
-<%- include("header"); %>
-<div class="form-group loginPage">
-  <h1 class="title login">Register</h1>
-  <form autocomplete="off" action="/register" method="post">
-    <label class="title login" for="username">Username: </label>
-    <input class= "form-control" type="text" name="username"><br>
-    <label class="title login" for="password">Password: </label>
-    <input class= "form-control passShift" type="password" name="password"><br>
-    <input type="submit" value="Submit" class="btn btn-light">
-  </form>
-</div>
+<%- include("partials/header"); %>
+<h1 class="title login">Register</h1>
+<form autocomplete="off" action="/register" method="post">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="firstName">First Name: </label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" name="firstName"><br>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-6 col-form-label" for="lastName"">Last Name: </label>
+    <div class="col-sm-6">
+      <input type="text" name="lastName" class="form-control"><br>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="username">Username: </label>
+    <div class="col-sm-10">
+      <input type="text" name="username" class="form-control"><br>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="password">Password: </label>
+    <div class="col-sm-10">
+      <input type="password" name="password" class="form-control"><br>
+    </div>
+  </div>
+<input type="submit" value="Submit" class="btn btn-light">
+</form>
 
 <i class="fas fa-spa tree-left"></i>
 
 <i class="fas fa-spa tree-right"></i>
 
 
-<%- include("footer"); %>
+<%- include("partials/footer"); %>

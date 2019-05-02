@@ -1,24 +1,11 @@
-<%- include("header"); %>
-<h1>Welcome <%= username %></h1>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 m-auto">
-      <h1 class="text-center display-4 my-4">Mongo File Uploads</h1>
-      <form action="/upload" method="post" enctype="multipart/form-data">
-        <div class="custom-file mb-3">
-          <input type="file" name="file" id="file" class="custom-file-input">
-          <label for="file" class="custom-file-label">Choose File</label>
-        </div>
-        <input type="submit" value="Submit" class="btn btn-primary btn-block">
-      </form>
+<%- include("partials/header"); %>
+<h1>Welcome <%= firstName %> <%= lastName %></h1>
+<% images.forEach((image) => { %>
+  <img src="<%= image %>" alt="nature_pic">
+  <% let num = images.indexOf(image); %>
+  <p><%= quotes[num] %></p>
+<% }); %>
 
 
 
-    </div>
-
-  </div>
-
-</div>
-
-
-<%- include("footer") %>
+<%- include("partials/footer") %>

@@ -16,9 +16,6 @@ form {
   left: 2px;
 }
 
-.loginPage {
-  padding-top: 200px;
-}
 
 .form-control {
   width: 25%;
@@ -94,6 +91,7 @@ form {
 .loginBackground {
   background-color: #ffd98e;
 }
+
 
 
 #pageHead {
