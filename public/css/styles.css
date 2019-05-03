@@ -17,12 +17,6 @@ form {
 }
 
 
-.form-control {
-  width: 25%;
-  display: inline;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
 
 .tree-left {
   position: relative;
@@ -90,6 +84,18 @@ form {
 
 .loginBackground {
   background-color: #ffd98e;
+}
+
+.user-image {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.user-profile {
+  padding: 3em;
+  border-radius: 100%;
 }
 
 

@@ -1,10 +1,33 @@
 <%- include("partials/header"); %>
-<h1>Welcome <%= firstName %> <%= lastName %></h1>
+<h1 class="title">Welcome
+  <%= firstName %>
+  <%= lastName %>
+</h1>
+<img class="user-profile" src="/images/meditation.jpg" alt="meditation">
+
 <% images.forEach((image) => { %>
-  <img src="<%= image %>" alt="nature_pic">
-  <% let num = images.indexOf(image); %>
-  <p><%= quotes[num] %></p>
+<% let num = images.indexOf(image); %>
+
+
+<% if (num == 0 || num % 2 ==0) { %>
+<div class="row">
+  <div class="col-md-6">
+    <img class="user-image <%= num %>" src="<%= image %>" alt="nature_pic">
+    <p>
+      <%= quotes[num] %>
+    </p>
+  </div>
+  <%  } else { %>
+  <div class="col-md-6">
+    <img class="user-image <%= num %>" src="<%= image %>" alt="nature_pic">
+    <p>
+      <%= quotes[num] %>
+    </p>
+  </div>
+</div>
+<% } %>
 <% }); %>
+
 
 
 

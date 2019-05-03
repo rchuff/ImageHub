@@ -5,7 +5,7 @@ module.exports.quote = () => {
     return Math.floor((quotes.length * Math.random()));
   };
   let quoteArray =[];
-  while (quoteArray.length < 7) {
+  while (quoteArray.length < 6) {
     let chosenQuote = quotes[quoteNum()];
     if (quoteArray.indexOf(chosenQuote) === -1) {
       quoteArray.push(chosenQuote);
@@ -41,7 +41,7 @@ module.exports.image = () => {
     };
 
     let imagesArray =[];
-    while (imagesArray.length < 7) {
+    while (imagesArray.length < 6) {
       let imageBack = images[imagNum()];
       if (imagesArray.indexOf(imageBack) === -1){
         imagesArray.push(imageBack);

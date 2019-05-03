@@ -59,8 +59,6 @@ app.post("/login", function(req, res) {
       if (userFound) {
         const hash = userFound[0].password;
         if (bcrypt.compareSync(password, hash)) {
-          console.log(info.image());
-          console.log(info.quote());
           res.render("user", {
             firstName: userFound[0].firstName,
             lastName: userFound[0].lastName,
