@@ -1,7 +1,7 @@
 <%- include("partials/header"); %>
 <div id="pageHead">
   <h1 class="title">ImageHub.</h1>
-  <h2 class="title">Your personal image storage.</h2>
+  <h2 class="title">Find your Zen.</h2>
   <img src="/images/nature2.jpg" alt="nature2.jpg" class="title-image">
 
   <form action="/login" method="post">
@@ -15,24 +15,23 @@
   </form>
 </div>
 
-<div id="siteDescription">
-  <div class="descripField">
-    <i class="fas fa-camera-retro pictureLeft"></i>
-    <p class="description left">ImageHub was invented as a means to store your personal photos and use some predefined filters.</p>
+<div class="siteDescription">
+  <div class="container">
+    <div class="row">
+      <div class="descripField col-sm-4">
+        <i class="fas fa-camera-retro picture"></i>
+        <p class="description">ImageHub is a place to see and hear the most relaxing aspects of nature you can imagine.</p>
+      </div>
+      <div class="descripField col-sm-4">
+        <i class="fas fa-comment picture"></i>
+        <p class="description">Each photo will be tagged with a randomly selected cheesy caption to truly capture the moment.</p>
+      </div>
+      <div class="descripField col-sm-4">
+        <i class="fas fa-smile picture"></i>
+        <p class="description">Whenever life has got you down come to ImageHub!</p>
+      </div>
+    </div>
   </div>
-
-  <div class="descripField">
-    <i class="fas fa-comment pictureRight"></i>
-    <p class="description right">Upload as many as you please and the photo will be tagged with a randomly selected cheesy caption to truly capture the moment.</p>
-  </div>
-
-  <div class="descripField">
-    <i class="fas fa-users pictureLeft"></i>
-    <p class="description left">Connect with friends and family to gather photos from all parts of your life!</p>
-  </div>
-
 </div>
-
-
 
 <%- include("partials/footer"); %>

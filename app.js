@@ -56,7 +56,7 @@ app.post("/login", function(req, res) {
     const username = req.body.username;
     const password = req.body.password;
     User.find({username: username}, function(err, userFound) {
-      if (userFound) {
+      if (userFound.length !=0) {
         const hash = userFound[0].password;
         if (bcrypt.compareSync(password, hash)) {
           res.render("user", {
@@ -66,10 +66,10 @@ app.post("/login", function(req, res) {
             quotes: info.quote()
           });
         } else {
-          res.redirect("/login");
+          res.render("login");
         }
       } else {
-        res.redirect("/login");
+        res.render("login");
       }
     });
   }
@@ -80,7 +80,6 @@ app.post("/register", function(req, res) {
   const lastName = req.body.lastName;
   const password = req.body.password;
   const username = req.body.username;
-  console.log(req.body);
   const hash = bcrypt.hashSync(password, saltRounds);
   const newUser = new User({
     firstName: firstName,
@@ -93,8 +92,11 @@ app.post("/register", function(req, res) {
     if (err){
       console.log(err);
     } else {
-      res.render("user", {firstName: newUser.firstName, lastName: newUser.lastName});
-      console.log(newUser);
+      res.render("user", {
+        firstName: newUser.firstName,
+        lastName: newUser.lastName,
+        images: info.image(),
+        quotes: info.quote()});
     }
   });
 });

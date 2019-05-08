@@ -7,33 +7,52 @@ form {
   position: relative;
 }
 
-.login {
+.loginPage {
   color: #616f39;
+  padding-top: 10em;
 }
 
-.passShift {
-  position: relative;
-  left: 2px;
+.registerPage {
+  color: #616f39;
+  padding-top: 7em;
 }
 
-
+.login-form {
+  width: 40%;
+  margin: auto;
+}
 
 .tree-left {
   position: relative;
   color: #616f39;
   font-size: 6rem;
-  bottom: 170px;
-  right: 300px;
+  bottom: 2em;
+  right: 3em;
 }
 
 .tree-right {
   position: relative;
   color: #616f39;
   font-size: 6rem;
-  bottom: 170px;
-  left: 300px;
+  bottom: 2em;
+  left: 3em;
 }
 
+.reg-tree-left {
+  position: relative;
+  color: #616f39;
+  font-size: 6rem;
+  bottom: 2.5em;
+  right: 3em;
+}
+
+.reg-tree-right {
+  position: relative;
+  color: #616f39;
+  font-size: 6rem;
+  bottom: 2.5em;
+  left: 3em;
+}
 
 .btn {
   margin: 0 5px 15px 5px;
@@ -52,34 +71,19 @@ form {
   margin: 1em;
 }
 
-.pictureLeft{
+.picture{
   font-size: 3em;
-  float: left;
-  margin-right: 10px;
-}
-
-.pictureRight {
-  font-size: 3em;
-  float: right;
-  margin-left: 10px;
 }
 
 .description{
   color: #616f39;
-  padding-top: 7px;
+  padding: 0.7em 1.5em;
 }
 
 .descripField {
   padding: 25px 0;
-}
-
-.left {
-  text-align: left;
-  width: 75%;
-}
-
-.right {
-  text-align: right;
+  width: 50%;
+  height: auto;
 }
 
 .loginBackground {
@@ -93,9 +97,20 @@ form {
   border-radius: 10%;
 }
 
+.user-login-header {
+  color: #616f39;
+  padding-top: 0.5em;
+}
+
 .user-profile {
   padding: 3em;
   border-radius: 100%;
+}
+
+.user-quote {
+  padding: 0.5em 1em;
+  font-family: fantasy;
+  color: #616f39;
 }
 
 

@@ -1,5 +1,5 @@
 <%- include("partials/header"); %>
-<h1 class="title">Welcome
+<h1 class="title user-login-header">Welcome
   <%= firstName %>
   <%= lastName %>
 </h1>
@@ -13,14 +13,14 @@
 <div class="row">
   <div class="col-md-6">
     <img class="user-image <%= num %>" src="<%= image %>" alt="nature_pic">
-    <p>
+    <p class="user-quote">
       <%= quotes[num] %>
     </p>
   </div>
   <%  } else { %>
   <div class="col-md-6">
     <img class="user-image <%= num %>" src="<%= image %>" alt="nature_pic">
-    <p>
+    <p class="user-quote">
       <%= quotes[num] %>
     </p>
   </div>
