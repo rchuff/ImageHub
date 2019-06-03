@@ -15,8 +15,8 @@ const sounds = [
 
 let userPhotos = document.querySelectorAll(".user-image");
 
-console.log(sounds);
 
+//assigns sound to each picture, checking if one of them is of IASP
 for (i = 0; i < userPhotos.length; i++) {
   userPhotos[i].addEventListener("click", (eve) => {
     let picNum = eve.srcElement.classList[1];

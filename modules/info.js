@@ -1,5 +1,7 @@
 //jshint esversion: 6
 
+
+//Randomly selects quote from quoteArray
 module.exports.quote = () => {
   quoteNum = () => {
     return Math.floor((quotes.length * Math.random()));
@@ -35,6 +37,7 @@ const quotes = [
 ];
 
 
+//Randomly selects image from imageArray.
 module.exports.image = () => {
     imagNum = () => {
       return Math.floor(images.length * Math.random());

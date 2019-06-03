@@ -5,10 +5,12 @@
 </h1>
 <img class="user-profile" src="/images/meditation.jpg" alt="meditation">
 
+
+
 <% images.forEach((image) => { %>
 <% let num = images.indexOf(image); %>
 
-
+<!-- separating out columns for the nature pictures-->
 <% if (num == 0 || num % 2 ==0) { %>
 <div class="row">
   <div class="col-md-6">
