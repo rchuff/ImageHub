@@ -4,7 +4,10 @@ const ejs = require("ejs");
 const db = require("./models/index.js");
 const routes = require("./routes/routing.js");
 const bodyParser = require("body-parser");
-
+let port = process.env.PORT;
+if (port == null || port ==""){
+  port = 3000;
+}
 
 const app = express();
 app.use(express.static("public"));
@@ -18,4 +21,4 @@ app.use('/', routes);
 
 
 
-app.listen(process.env.PORT || 3000, () => console.log("Server now running on port 3000"));
+app.listen(port, () => console.log("Server now running on port " + port));

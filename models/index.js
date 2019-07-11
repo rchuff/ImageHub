@@ -1,10 +1,13 @@
 //jshint esversion: 6
 const mongoose = require("mongoose");
+require('dotenv').config();
+
 mongoose.set('debug', true);
 
-mongoose.connect("mongodb://localhost:27017/userimageDB", {
+mongoose.connect(`mongodb+srv://admin-ryan:${process.env.MONGODB_PASS}@cluster0-kzf2g.mongodb.net/userimageDB?retryWrites=true&w=majority`, {
   useNewUrlParser: true
-});
+})
+.catch(err => console.log(err));
 
 const userSchema = new mongoose.Schema({
   username: String,
