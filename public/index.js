@@ -21,7 +21,7 @@ for (i = 0; i < userPhotos.length; i++) {
   userPhotos[i].addEventListener("click", (eve) => {
     let picNum = eve.srcElement.classList[1];
     let source = eve.srcElement.src;
-    if (source == "./images/IASP.jpg") {
+    if (source == "/images/IASP.jpg") {
       let myAudio = new Audio("audio/mac.mp3");
       myAudio.play();
     } else {
