@@ -93,7 +93,8 @@ form {
 .user-image {
   width: 12em;
   height: 12em;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10%;
 }
 
